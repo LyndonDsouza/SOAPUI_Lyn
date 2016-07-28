@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="a8b5e17a-4a75-4d0b-9329-4ca1f3b811ec" activeEnvironment="Default environment" name="ExpenseReportManager" resourceRoot="" soapui-version="6.0.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="01b76377-fb0f-441e-98ef-a05160414e9c" wsaVersion="NONE" name="CpiBasicHttpBinding_IExpenseReportManager" type="wsdl" bindingName="{http://tempuri.org/}CpiBasicHttpBinding_IExpenseReportManager" soapVersion="1_1" anonymous="optional" definition="http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc?wsdl"><con:part><con:url>http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ExpenseReportManager" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc?xsd=xsd0" namespace="http://tempuri.org/"/>
+      <xsd:import schemaLocation="http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Hsp.Nexonia.ExpenseReportAccess.Contracts.Dc"/>
+      <xsd:import schemaLocation="http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/CPI.Core.Environment.Validations"/>
+      <xsd:import schemaLocation="http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Hsp.Nexonia.ExpenseReportManager.Contracts.Dc"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IExpenseReportManager_PersistExpenseReportDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:PersistExpenseReportDetails"/>
+  </wsdl:message>
+  <wsdl:message name="IExpenseReportManager_PersistExpenseReportDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PersistExpenseReportDetailsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IExpenseReportManager_PersistLineItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:PersistLineItems"/>
+  </wsdl:message>
+  <wsdl:message name="IExpenseReportManager_PersistLineItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PersistLineItemsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IExpenseReportManager_PersistLineItemAttachment_InputMessage">
+    <wsdl:part name="parameters" element="tns:PersistLineItemAttachment"/>
+  </wsdl:message>
+  <wsdl:message name="IExpenseReportManager_PersistLineItemAttachment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PersistLineItemAttachmentResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IExpenseReportManager_GetDataExchangeStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataExchangeStatus"/>
+  </wsdl:message>
+  <wsdl:message name="IExpenseReportManager_GetDataExchangeStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataExchangeStatusResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IExpenseReportManager_PersistExpenseReportAttachment_InputMessage">
+    <wsdl:part name="parameters" element="tns:PersistExpenseReportAttachment"/>
+  </wsdl:message>
+  <wsdl:message name="IExpenseReportManager_PersistExpenseReportAttachment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PersistExpenseReportAttachmentResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IExpenseReportManager">
+    <wsdl:operation name="PersistExpenseReportDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExpenseReportManager/PersistExpenseReportDetails" message="tns:IExpenseReportManager_PersistExpenseReportDetails_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IExpenseReportManager/PersistExpenseReportDetailsResponse" message="tns:IExpenseReportManager_PersistExpenseReportDetails_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="PersistLineItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExpenseReportManager/PersistLineItems" message="tns:IExpenseReportManager_PersistLineItems_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IExpenseReportManager/PersistLineItemsResponse" message="tns:IExpenseReportManager_PersistLineItems_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="PersistLineItemAttachment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExpenseReportManager/PersistLineItemAttachment" message="tns:IExpenseReportManager_PersistLineItemAttachment_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IExpenseReportManager/PersistLineItemAttachmentResponse" message="tns:IExpenseReportManager_PersistLineItemAttachment_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataExchangeStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExpenseReportManager/GetDataExchangeStatus" message="tns:IExpenseReportManager_GetDataExchangeStatus_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IExpenseReportManager/GetDataExchangeStatusResponse" message="tns:IExpenseReportManager_GetDataExchangeStatus_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="PersistExpenseReportAttachment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExpenseReportManager/PersistExpenseReportAttachment" message="tns:IExpenseReportManager_PersistExpenseReportAttachment_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IExpenseReportManager/PersistExpenseReportAttachmentResponse" message="tns:IExpenseReportManager_PersistExpenseReportAttachment_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CpiBasicHttpBinding_IExpenseReportManager" type="tns:IExpenseReportManager">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="PersistExpenseReportDetails">
+      <soap:operation soapAction="http://tempuri.org/IExpenseReportManager/PersistExpenseReportDetails" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PersistLineItems">
+      <soap:operation soapAction="http://tempuri.org/IExpenseReportManager/PersistLineItems" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PersistLineItemAttachment">
+      <soap:operation soapAction="http://tempuri.org/IExpenseReportManager/PersistLineItemAttachment" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataExchangeStatus">
+      <soap:operation soapAction="http://tempuri.org/IExpenseReportManager/GetDataExchangeStatus" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PersistExpenseReportAttachment">
+      <soap:operation soapAction="http://tempuri.org/IExpenseReportManager/PersistExpenseReportAttachment" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ExpenseReportManager">
+    <wsdl:port name="CpiBasicHttpBinding_IExpenseReportManager" binding="tns:CpiBasicHttpBinding_IExpenseReportManager">
+      <soap:address location="http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/">
+  <xs:import schemaLocation="http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Hsp.Nexonia.ExpenseReportAccess.Contracts.Dc"/>
+  <xs:import schemaLocation="http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Hsp.Nexonia.ExpenseReportManager.Contracts.Dc"/>
+  <xs:element name="PersistExpenseReportDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="request" nillable="true" type="q1:PersistExpenseReportHeaderRequest" xmlns:q1="http://schemas.datacontract.org/2004/07/Hsp.Nexonia.ExpenseReportAccess.Contracts.Dc"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PersistExpenseReportDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PersistExpenseReportDetailsResult" nillable="true" type="q2:PersistExpenseReportHeaderRespose" xmlns:q2="http://schemas.datacontract.org/2004/07/Hsp.Nexonia.ExpenseReportAccess.Contracts.Dc"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PersistLineItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="request" nillable="true" type="q3:PersistLineItemListRequest" xmlns:q3="http://schemas.datacontract.org/2004/07/Hsp.Nexonia.ExpenseReportAccess.Contracts.Dc"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PersistLineItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PersistLineItemsResult" nillable="true" type="q4:PersistLineItemListResponse" xmlns:q4="http://schemas.datacontract.org/2004/07/Hsp.Nexonia.ExpenseReportAccess.Contracts.Dc"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PersistLineItemAttachment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="persistLineItemAttachmentRequest" nillable="true" type="q5:PersistLineItemAttachmentRequest" xmlns:q5="http://schemas.datacontract.org/2004/07/Hsp.Nexonia.ExpenseReportManager.Contracts.Dc"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PersistLineItemAttachmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PersistLineItemAttachmentResult" nillable="true" type="q6:PersistLineItemAttachmentResponse" xmlns:q6="http://schemas.datacontract.org/2004/07/Hsp.Nexonia.ExpenseReportManager.Contracts.Dc"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataExchangeStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="request" nillable="true" type="q7:GetExpenseReportHeaderRequest" xmlns:q7="http://schemas.datacontract.org/2004/07/Hsp.Nexonia.ExpenseReportAccess.Contracts.Dc"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataExchangeStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDataExchangeStatusResult" nillable="true" type="q8:GetExpenseReportHeaderResponse" xmlns:q8="http://schemas.datacontract.org/2004/07/Hsp.Nexonia.ExpenseReportAccess.Contracts.Dc"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PersistExpenseReportAttachment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="persistExpenseReportAttachmentRequest" nillable="true" type="q9:PersistExpenseReportAttachmentRequest" xmlns:q9="http://schemas.datacontract.org/2004/07/Hsp.Nexonia.ExpenseReportManager.Contracts.Dc"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PersistExpenseReportAttachmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PersistExpenseReportAttachmentResult" nillable="true" type="q10:PersistExpenseReportAttachmentResponse" xmlns:q10="http://schemas.datacontract.org/2004/07/Hsp.Nexonia.ExpenseReportManager.Contracts.Dc"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc?xsd=xsd2</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Hsp.Nexonia.ExpenseReportAccess.Contracts.Dc" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Hsp.Nexonia.ExpenseReportAccess.Contracts.Dc" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:import schemaLocation="http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  <xs:import schemaLocation="http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/CPI.Core.Environment.Validations"/>
+  <xs:complexType name="PersistExpenseReportHeaderRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExpenseReportHeader" nillable="true" type="tns:ExpenseReportHeader"/>
+    </xs:sequence>
+    <xs:attribute ref="ser:Id"/>
+    <xs:attribute ref="ser:Ref"/>
+  </xs:complexType>
+  <xs:element name="PersistExpenseReportHeaderRequest" nillable="true" type="tns:PersistExpenseReportHeaderRequest"/>
+  <xs:complexType name="ExpenseReportHeader">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BuCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DocumentId" nillable="true" type="xs:int"/>
+      <xs:element minOccurs="0" name="EmployeeCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ExpenseReportHeaderNexoniaId" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Id" type="xs:int"/>
+      <xs:element minOccurs="0" name="LineItemCount" type="xs:int"/>
+      <xs:element minOccurs="0" name="LineItemList" nillable="true" type="tns:ArrayOfLineItem"/>
+      <xs:element minOccurs="0" name="ReferenceId" type="ser:guid"/>
+    </xs:sequence>
+    <xs:attribute ref="ser:Id"/>
+    <xs:attribute ref="ser:Ref"/>
+  </xs:complexType>
+  <xs:element name="ExpenseReportHeader" nillable="true" type="tns:ExpenseReportHeader"/>
+  <xs:complexType name="ArrayOfLineItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LineItem" nillable="true" type="tns:LineItem"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLineItem" nillable="true" type="tns:ArrayOfLineItem"/>
+  <xs:complexType name="LineItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DocumentId" nillable="true" type="xs:int"/>
+      <xs:element minOccurs="0" name="ExpenseReportHeaderId" type="xs:int"/>
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="HasAttachment" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Id" type="xs:int"/>
+      <xs:element minOccurs="0" name="LineItemNexoniaId" type="xs:int"/>
+      <xs:element minOccurs="0" name="LineItemValueList" nillable="true" type="tns:ArrayOfLineItemValue"/>
+    </xs:sequence>
+    <xs:attribute ref="ser:Id"/>
+    <xs:attribute ref="ser:Ref"/>
+  </xs:complexType>
+  <xs:element name="LineItem" nillable="true" type="tns:LineItem"/>
+  <xs:complexType name="ArrayOfLineItemValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LineItemValue" nillable="true" type="tns:LineItemValue"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLineItemValue" nillable="true" type="tns:ArrayOfLineItemValue"/>
+  <xs:complexType name="LineItemValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int"/>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute ref="ser:Id"/>
+    <xs:attribute ref="ser:Ref"/>
+  </xs:complexType>
+  <xs:element name="LineItemValue" nillable="true" type="tns:LineItemValue"/>
+  <xs:complexType name="PersistExpenseReportHeaderRespose">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ReferenceId" type="ser:guid"/>
+      <xs:element minOccurs="0" name="ValidationResults" nillable="true" type="q1:ValidationResults" xmlns:q1="http://schemas.datacontract.org/2004/07/CPI.Core.Environment.Validations"/>
+    </xs:sequence>
+    <xs:attribute ref="ser:Id"/>
+    <xs:attribute ref="ser:Ref"/>
+  </xs:complexType>
+  <xs:element name="PersistExpenseReportHeaderRespose" nillable="true" type="tns:PersistExpenseReportHeaderRespose"/>
+  <xs:complexType name="PersistLineItemListRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExpenseReportHeaderId" type="xs:int"/>
+      <xs:element minOccurs="0" name="ExpenseReportLineItemList" nillable="true" type="tns:ArrayOfLineItem"/>
+    </xs:sequence>
+    <xs:attribute ref="ser:Id"/>
+    <xs:attribute ref="ser:Ref"/>
+  </xs:complexType>
+  <xs:element name="PersistLineItemListRequest" nillable="true" type="tns:PersistLineItemListRequest"/>
+  <xs:complexType name="PersistLineItemListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ValidationResults" nillable="true" type="q2:ValidationResults" xmlns:q2="http://schemas.datacontract.org/2004/07/CPI.Core.Environment.Validations"/>
+    </xs:sequence>
+    <xs:attribute ref="ser:Id"/>
+    <xs:attribute ref="ser:Ref"/>
+  </xs:complexType>
+  <xs:element name="PersistLineItemListResponse" nillable="true" type="tns:PersistLineItemListResponse"/>
+  <xs:complexType name="GetExpenseReportHeaderRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ReferenceId" type="ser:guid"/>
+    </xs:sequence>
+    <xs:attribute ref="ser:Id"/>
+    <xs:attribute ref="ser:Ref"/>
+  </xs:complexType>
+  <xs:element name="GetExpenseReportHeaderRequest" nillable="true" type="tns:GetExpenseReportHeaderRequest"/>
+  <xs:complexType name="GetExpenseReportHeaderResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExpenseReportHeader" nillable="true" type="tns:ExpenseReportHeader"/>
+      <xs:element minOccurs="0" name="ValidationResults" nillable="true" type="q3:ValidationResults" xmlns:q3="http://schemas.datacontract.org/2004/07/CPI.Core.Environment.Validations"/>
+    </xs:sequence>
+    <xs:attribute ref="ser:Id"/>
+    <xs:attribute ref="ser:Ref"/>
+  </xs:complexType>
+  <xs:element name="GetExpenseReportHeaderResponse" nillable="true" type="tns:GetExpenseReportHeaderResponse"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc?xsd=xsd3</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CPI.Core.Environment.Validations" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/CPI.Core.Environment.Validations">
+  <xs:import schemaLocation="http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  <xs:complexType name="ValidationResults">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ValidationResultList" nillable="true" type="tns:ArrayOfValidationResult"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidationResults" nillable="true" type="tns:ValidationResults"/>
+  <xs:complexType name="ArrayOfValidationResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ValidationResult" nillable="true" type="tns:ValidationResult"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfValidationResult" nillable="true" type="tns:ArrayOfValidationResult"/>
+  <xs:complexType name="ValidationResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExceptionInformation" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="IsValid" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="StealthMessage" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ValidationCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="ValidationMessage" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ValidationSeverity" type="tns:ValidationSeverityEnum"/>
+      <xs:element minOccurs="0" name="ValidationTag" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidationResult" nillable="true" type="tns:ValidationResult"/>
+  <xs:simpleType name="ValidationSeverityEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Information">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Warning">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Error">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ValidationSeverityEnum" nillable="true" type="tns:ValidationSeverityEnum"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc?xsd=xsd4</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Hsp.Nexonia.ExpenseReportManager.Contracts.Dc" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Hsp.Nexonia.ExpenseReportManager.Contracts.Dc" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:import schemaLocation="http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  <xs:import schemaLocation="http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/CPI.Core.Environment.Validations"/>
+  <xs:complexType name="PersistLineItemAttachmentRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Content" nillable="true" type="xs:base64Binary"/>
+      <xs:element minOccurs="0" name="ExpenseReportHeaderId" type="xs:int"/>
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="LineItemNexoniaId" type="xs:int"/>
+      <xs:element minOccurs="0" name="MimeType" nillable="true" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute ref="ser:Id"/>
+    <xs:attribute ref="ser:Ref"/>
+  </xs:complexType>
+  <xs:element name="PersistLineItemAttachmentRequest" nillable="true" type="tns:PersistLineItemAttachmentRequest"/>
+  <xs:complexType name="PersistLineItemAttachmentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LineItem" nillable="true" type="tns:LineItem"/>
+      <xs:element minOccurs="0" name="ValidationResults" nillable="true" type="q1:ValidationResults" xmlns:q1="http://schemas.datacontract.org/2004/07/CPI.Core.Environment.Validations"/>
+    </xs:sequence>
+    <xs:attribute ref="ser:Id"/>
+    <xs:attribute ref="ser:Ref"/>
+  </xs:complexType>
+  <xs:element name="PersistLineItemAttachmentResponse" nillable="true" type="tns:PersistLineItemAttachmentResponse"/>
+  <xs:complexType name="LineItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DocumentId" nillable="true" type="xs:int"/>
+      <xs:element minOccurs="0" name="ExpenseReportHeader" nillable="true" type="tns:ExpenseReportHeader"/>
+      <xs:element minOccurs="0" name="ExpenseReportHeaderId" type="xs:int"/>
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="HasAttachment" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Id" type="xs:int"/>
+      <xs:element minOccurs="0" name="LineItemNexoniaId" type="xs:int"/>
+      <xs:element minOccurs="0" name="LineItemValueList" nillable="true" type="tns:ArrayOfLineItemValue"/>
+    </xs:sequence>
+    <xs:attribute ref="ser:Id"/>
+    <xs:attribute ref="ser:Ref"/>
+  </xs:complexType>
+  <xs:element name="LineItem" nillable="true" type="tns:LineItem"/>
+  <xs:complexType name="ExpenseReportHeader">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BuCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DocumentId" nillable="true" type="xs:int"/>
+      <xs:element minOccurs="0" name="EmployeeCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ExpenseReportHeaderNexoniaId" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Id" type="xs:int"/>
+      <xs:element minOccurs="0" name="LineItemCount" type="xs:int"/>
+      <xs:element minOccurs="0" name="LineItemList" nillable="true" type="tns:ArrayOfLineItem"/>
+      <xs:element minOccurs="0" name="ReferenceId" type="ser:guid"/>
+    </xs:sequence>
+    <xs:attribute ref="ser:Id"/>
+    <xs:attribute ref="ser:Ref"/>
+  </xs:complexType>
+  <xs:element name="ExpenseReportHeader" nillable="true" type="tns:ExpenseReportHeader"/>
+  <xs:complexType name="ArrayOfLineItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LineItem" nillable="true" type="tns:LineItem"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLineItem" nillable="true" type="tns:ArrayOfLineItem"/>
+  <xs:complexType name="ArrayOfLineItemValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LineItemValue" nillable="true" type="tns:LineItemValue"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLineItemValue" nillable="true" type="tns:ArrayOfLineItemValue"/>
+  <xs:complexType name="LineItemValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int"/>
+      <xs:element minOccurs="0" name="LineItem" nillable="true" type="tns:LineItem"/>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute ref="ser:Id"/>
+    <xs:attribute ref="ser:Ref"/>
+  </xs:complexType>
+  <xs:element name="LineItemValue" nillable="true" type="tns:LineItemValue"/>
+  <xs:complexType name="PersistExpenseReportAttachmentRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompanyEntityId" type="xs:int"/>
+      <xs:element minOccurs="0" name="CompanyId" type="xs:int"/>
+      <xs:element minOccurs="0" name="Content" nillable="true" type="xs:base64Binary"/>
+      <xs:element minOccurs="0" name="DocumentId" type="ser:guid"/>
+      <xs:element minOccurs="0" name="EmployeeId" type="xs:int"/>
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FiscalMonth" type="xs:int"/>
+      <xs:element minOccurs="0" name="FiscalYear" type="xs:int"/>
+      <xs:element minOccurs="0" name="MimeType" nillable="true" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute ref="ser:Id"/>
+    <xs:attribute ref="ser:Ref"/>
+  </xs:complexType>
+  <xs:element name="PersistExpenseReportAttachmentRequest" nillable="true" type="tns:PersistExpenseReportAttachmentRequest"/>
+  <xs:complexType name="PersistExpenseReportAttachmentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ValidationResults" nillable="true" type="q2:ValidationResults" xmlns:q2="http://schemas.datacontract.org/2004/07/CPI.Core.Environment.Validations"/>
+    </xs:sequence>
+    <xs:attribute ref="ser:Id"/>
+    <xs:attribute ref="ser:Ref"/>
+  </xs:complexType>
+  <xs:element name="PersistExpenseReportAttachmentResponse" nillable="true" type="tns:PersistExpenseReportAttachmentResponse"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc</con:endpoint></con:endpoints><con:operation id="da587106-559b-485d-a915-2bfa9a148292" isOneWay="false" action="http://tempuri.org/IExpenseReportManager/GetDataExchangeStatus" name="GetDataExchangeStatus" bindingOperationName="GetDataExchangeStatus" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1f35bc82-e6ee-4bef-a58b-d7d240e5bf6b" defaultOutgoingWss="" defaultIncomingWss="" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:hsp="http://schemas.datacontract.org/2004/07/Hsp.Nexonia.ExpenseReportAccess.Contracts.Dc">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetDataExchangeStatus>\r
+         <!--Optional:-->\r
+         <tem:request ser:Id="?" ser:Ref="?">\r
+            <!--Optional:-->\r
+            <hsp:ReferenceId>?</hsp:ReferenceId>\r
+         </tem:request>\r
+      </tem:GetDataExchangeStatus>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IExpenseReportManager/GetDataExchangeStatus"/></con:call></con:operation><con:operation id="60ca7aae-91a1-4b00-bc35-dd77a2e0e5a6" isOneWay="false" action="http://tempuri.org/IExpenseReportManager/PersistExpenseReportAttachment" name="PersistExpenseReportAttachment" bindingOperationName="PersistExpenseReportAttachment" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e0937176-81b9-46a4-a1cb-af3b5149b202" defaultOutgoingWss="" defaultIncomingWss="" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:hsp="http://schemas.datacontract.org/2004/07/Hsp.Nexonia.ExpenseReportManager.Contracts.Dc">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:PersistExpenseReportAttachment>\r
+         <!--Optional:-->\r
+         <tem:persistExpenseReportAttachmentRequest ser:Id="?" ser:Ref="?">\r
+            <!--Optional:-->\r
+            <hsp:CompanyEntityId>?</hsp:CompanyEntityId>\r
+            <!--Optional:-->\r
+            <hsp:CompanyId>?</hsp:CompanyId>\r
+            <!--Optional:-->\r
+            <hsp:Content>cid:961697304199</hsp:Content>\r
+            <!--Optional:-->\r
+            <hsp:DocumentId>?</hsp:DocumentId>\r
+            <!--Optional:-->\r
+            <hsp:EmployeeId>?</hsp:EmployeeId>\r
+            <!--Optional:-->\r
+            <hsp:FileName>?</hsp:FileName>\r
+            <!--Optional:-->\r
+            <hsp:FiscalMonth>?</hsp:FiscalMonth>\r
+            <!--Optional:-->\r
+            <hsp:FiscalYear>?</hsp:FiscalYear>\r
+            <!--Optional:-->\r
+            <hsp:MimeType>?</hsp:MimeType>\r
+         </tem:persistExpenseReportAttachmentRequest>\r
+      </tem:PersistExpenseReportAttachment>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IExpenseReportManager/PersistExpenseReportAttachment"/></con:call></con:operation><con:operation id="0ad4ee6c-c707-4c3d-ac73-694bc09ca0e4" isOneWay="false" action="http://tempuri.org/IExpenseReportManager/PersistExpenseReportDetails" name="PersistExpenseReportDetails" bindingOperationName="PersistExpenseReportDetails" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="00ca1687-5e36-4f46-a1ea-bd677c0c5edd" defaultOutgoingWss="" defaultIncomingWss="" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:hsp="http://schemas.datacontract.org/2004/07/Hsp.Nexonia.ExpenseReportAccess.Contracts.Dc">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:PersistExpenseReportDetails>\r
+         <!--Optional:-->\r
+         <tem:request ser:Id="?" ser:Ref="?">\r
+            <!--Optional:-->\r
+            <hsp:ExpenseReportHeader ser:Id="?" ser:Ref="?">\r
+               <!--Optional:-->\r
+               <hsp:BuCode>?</hsp:BuCode>\r
+               <!--Optional:-->\r
+               <hsp:DocumentId>?</hsp:DocumentId>\r
+               <!--Optional:-->\r
+               <hsp:EmployeeCode>?</hsp:EmployeeCode>\r
+               <!--Optional:-->\r
+               <hsp:ExpenseReportHeaderNexoniaId>?</hsp:ExpenseReportHeaderNexoniaId>\r
+               <!--Optional:-->\r
+               <hsp:Id>?</hsp:Id>\r
+               <!--Optional:-->\r
+               <hsp:LineItemCount>?</hsp:LineItemCount>\r
+               <!--Optional:-->\r
+               <hsp:LineItemList>\r
+                  <!--Zero or more repetitions:-->\r
+                  <hsp:LineItem ser:Id="?" ser:Ref="?">\r
+                     <!--Optional:-->\r
+                     <hsp:DocumentId>?</hsp:DocumentId>\r
+                     <!--Optional:-->\r
+                     <hsp:ExpenseReportHeaderId>?</hsp:ExpenseReportHeaderId>\r
+                     <!--Optional:-->\r
+                     <hsp:FileName>?</hsp:FileName>\r
+                     <!--Optional:-->\r
+                     <hsp:HasAttachment>?</hsp:HasAttachment>\r
+                     <!--Optional:-->\r
+                     <hsp:Id>?</hsp:Id>\r
+                     <!--Optional:-->\r
+                     <hsp:LineItemNexoniaId>?</hsp:LineItemNexoniaId>\r
+                     <!--Optional:-->\r
+                     <hsp:LineItemValueList>\r
+                        <!--Zero or more repetitions:-->\r
+                        <hsp:LineItemValue ser:Id="?" ser:Ref="?">\r
+                           <!--Optional:-->\r
+                           <hsp:Id>?</hsp:Id>\r
+                           <!--Optional:-->\r
+                           <hsp:Name>?</hsp:Name>\r
+                           <!--Optional:-->\r
+                           <hsp:Value>?</hsp:Value>\r
+                        </hsp:LineItemValue>\r
+                     </hsp:LineItemValueList>\r
+                  </hsp:LineItem>\r
+               </hsp:LineItemList>\r
+               <!--Optional:-->\r
+               <hsp:ReferenceId>?</hsp:ReferenceId>\r
+            </hsp:ExpenseReportHeader>\r
+         </tem:request>\r
+      </tem:PersistExpenseReportDetails>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IExpenseReportManager/PersistExpenseReportDetails"/></con:call></con:operation><con:operation id="8fe4a466-82c1-4f2f-a653-1d16ba729871" isOneWay="false" action="http://tempuri.org/IExpenseReportManager/PersistLineItemAttachment" name="PersistLineItemAttachment" bindingOperationName="PersistLineItemAttachment" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b8c7d529-790f-445f-92ae-ea812f5cae9b" defaultOutgoingWss="" defaultIncomingWss="" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:hsp="http://schemas.datacontract.org/2004/07/Hsp.Nexonia.ExpenseReportManager.Contracts.Dc">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:PersistLineItemAttachment>\r
+         <!--Optional:-->\r
+         <tem:persistLineItemAttachmentRequest ser:Id="?" ser:Ref="?">\r
+            <!--Optional:-->\r
+            <hsp:Content>cid:359120747276</hsp:Content>\r
+            <!--Optional:-->\r
+            <hsp:ExpenseReportHeaderId>?</hsp:ExpenseReportHeaderId>\r
+            <!--Optional:-->\r
+            <hsp:FileName>?</hsp:FileName>\r
+            <!--Optional:-->\r
+            <hsp:LineItemNexoniaId>?</hsp:LineItemNexoniaId>\r
+            <!--Optional:-->\r
+            <hsp:MimeType>?</hsp:MimeType>\r
+         </tem:persistLineItemAttachmentRequest>\r
+      </tem:PersistLineItemAttachment>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IExpenseReportManager/PersistLineItemAttachment"/></con:call></con:operation><con:operation id="f924f322-16ca-4fb6-894e-dffde6dde0f1" isOneWay="false" action="http://tempuri.org/IExpenseReportManager/PersistLineItems" name="PersistLineItems" bindingOperationName="PersistLineItems" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b1f041eb-cfaa-4af6-8d25-2dfc3ec45f7c" defaultOutgoingWss="" defaultIncomingWss="" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:hsp="http://schemas.datacontract.org/2004/07/Hsp.Nexonia.ExpenseReportAccess.Contracts.Dc">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:PersistLineItems>\r
+         <!--Optional:-->\r
+         <tem:request ser:Id="?" ser:Ref="?">\r
+            <!--Optional:-->\r
+            <hsp:ExpenseReportHeaderId>?</hsp:ExpenseReportHeaderId>\r
+            <!--Optional:-->\r
+            <hsp:ExpenseReportLineItemList>\r
+               <!--Zero or more repetitions:-->\r
+               <hsp:LineItem ser:Id="?" ser:Ref="?">\r
+                  <!--Optional:-->\r
+                  <hsp:DocumentId>?</hsp:DocumentId>\r
+                  <!--Optional:-->\r
+                  <hsp:ExpenseReportHeaderId>?</hsp:ExpenseReportHeaderId>\r
+                  <!--Optional:-->\r
+                  <hsp:FileName>?</hsp:FileName>\r
+                  <!--Optional:-->\r
+                  <hsp:HasAttachment>?</hsp:HasAttachment>\r
+                  <!--Optional:-->\r
+                  <hsp:Id>?</hsp:Id>\r
+                  <!--Optional:-->\r
+                  <hsp:LineItemNexoniaId>?</hsp:LineItemNexoniaId>\r
+                  <!--Optional:-->\r
+                  <hsp:LineItemValueList>\r
+                     <!--Zero or more repetitions:-->\r
+                     <hsp:LineItemValue ser:Id="?" ser:Ref="?">\r
+                        <!--Optional:-->\r
+                        <hsp:Id>?</hsp:Id>\r
+                        <!--Optional:-->\r
+                        <hsp:Name>?</hsp:Name>\r
+                        <!--Optional:-->\r
+                        <hsp:Value>?</hsp:Value>\r
+                     </hsp:LineItemValue>\r
+                  </hsp:LineItemValueList>\r
+               </hsp:LineItem>\r
+            </hsp:ExpenseReportLineItemList>\r
+         </tem:request>\r
+      </tem:PersistLineItems>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IExpenseReportManager/PersistLineItems"/></con:call></con:operation></con:interface><con:testSuite id="2c555659-3124-4074-8cf0-58da413425d4" name="CpiBasicHttpBinding_IExpenseReportManager TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="259052de-856e-4560-a67b-f15f13500477" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="GetDataExchangeStatus TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="92dcead6-28e5-48cc-981f-3a39fe5c894b" name="GetDataExchangeStatus"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CpiBasicHttpBinding_IExpenseReportManager</con:interface><con:operation>GetDataExchangeStatus</con:operation><con:request name="GetDataExchangeStatus" id="84f3955d-ee61-4abd-9ead-5d4a501087dd" defaultOutgoingWss="" defaultIncomingWss=""><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:hsp="http://schemas.datacontract.org/2004/07/Hsp.Nexonia.ExpenseReportAccess.Contracts.Dc">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetDataExchangeStatus>\r
+         <!--Optional:-->\r
+         <tem:request ser:Id="?" ser:Ref="?">\r
+            <!--Optional:-->\r
+            <hsp:ReferenceId>?</hsp:ReferenceId>\r
+         </tem:request>\r
+      </tem:GetDataExchangeStatus>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://tempuri.org/IExpenseReportManager/GetDataExchangeStatus"/></con:request></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="a23d0e66-ce90-49e9-89f3-53082c9132cc" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PersistExpenseReportAttachment TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="9616acb0-6bb0-46a6-84e8-0734b663750e" name="PersistExpenseReportAttachment"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CpiBasicHttpBinding_IExpenseReportManager</con:interface><con:operation>PersistExpenseReportAttachment</con:operation><con:request name="PersistExpenseReportAttachment" id="86391f12-e630-4b69-ab95-20aa238cbf52" defaultOutgoingWss="" defaultIncomingWss=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:hsp="http://schemas.datacontract.org/2004/07/Hsp.Nexonia.ExpenseReportManager.Contracts.Dc">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:PersistExpenseReportAttachment>\r
+         <!--Optional:-->\r
+         <tem:persistExpenseReportAttachmentRequest>\r
+            <!--Optional:-->\r
+            <hsp:CompanyEntityId>060</hsp:CompanyEntityId>\r
+            <!--Optional:-->\r
+            <hsp:CompanyId>595</hsp:CompanyId>\r
+            <!--Optional:-->\r
+            <hsp:Content>VGhpcyBpcyBhbiBlbmNvZGVkIHN0cmluZw==</hsp:Content>\r
+            <!--Optional:-->\r
+            <hsp:DocumentId>${=java.util.UUID.randomUUID()}</hsp:DocumentId>\r
+            <!--Optional:-->\r
+            <hsp:EmployeeId>123</hsp:EmployeeId>\r
+            <!--Optional:-->\r
+            <hsp:FileName>ABC.PDF</hsp:FileName>\r
+            <!--Optional:-->\r
+            <hsp:FiscalMonth>01</hsp:FiscalMonth>\r
+            <!--Optional:-->\r
+            <hsp:FiscalYear>2012</hsp:FiscalYear>\r
+            <!--Optional:-->\r
+            <hsp:MimeType>PDF</hsp:MimeType>\r
+         </tem:persistExpenseReportAttachmentRequest>\r
+      </tem:PersistExpenseReportAttachment>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="http://tempuri.org/IExpenseReportManager/PersistExpenseReportAttachment" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="46d71314-dfe0-40b4-ac0f-1f2e830c3420" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PersistExpenseReportDetails TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="c1c64e35-3b5b-4fb6-a36b-2c8a2b611e76" name="PersistExpenseReportDetails"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CpiBasicHttpBinding_IExpenseReportManager</con:interface><con:operation>PersistExpenseReportDetails</con:operation><con:request name="PersistExpenseReportDetails" id="67207c19-280b-4529-afa3-757959c90f1c" defaultOutgoingWss="" defaultIncomingWss=""><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:hsp="http://schemas.datacontract.org/2004/07/Hsp.Nexonia.ExpenseReportAccess.Contracts.Dc">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:PersistExpenseReportDetails>\r
+         <!--Optional:-->\r
+         <tem:request ser:Id="?" ser:Ref="?">\r
+            <!--Optional:-->\r
+            <hsp:ExpenseReportHeader ser:Id="?" ser:Ref="?">\r
+               <!--Optional:-->\r
+               <hsp:BuCode>?</hsp:BuCode>\r
+               <!--Optional:-->\r
+               <hsp:DocumentId>?</hsp:DocumentId>\r
+               <!--Optional:-->\r
+               <hsp:EmployeeCode>?</hsp:EmployeeCode>\r
+               <!--Optional:-->\r
+               <hsp:ExpenseReportHeaderNexoniaId>?</hsp:ExpenseReportHeaderNexoniaId>\r
+               <!--Optional:-->\r
+               <hsp:Id>?</hsp:Id>\r
+               <!--Optional:-->\r
+               <hsp:LineItemCount>?</hsp:LineItemCount>\r
+               <!--Optional:-->\r
+               <hsp:LineItemList>\r
+                  <!--Zero or more repetitions:-->\r
+                  <hsp:LineItem ser:Id="?" ser:Ref="?">\r
+                     <!--Optional:-->\r
+                     <hsp:DocumentId>?</hsp:DocumentId>\r
+                     <!--Optional:-->\r
+                     <hsp:ExpenseReportHeaderId>?</hsp:ExpenseReportHeaderId>\r
+                     <!--Optional:-->\r
+                     <hsp:FileName>?</hsp:FileName>\r
+                     <!--Optional:-->\r
+                     <hsp:HasAttachment>?</hsp:HasAttachment>\r
+                     <!--Optional:-->\r
+                     <hsp:Id>?</hsp:Id>\r
+                     <!--Optional:-->\r
+                     <hsp:LineItemNexoniaId>?</hsp:LineItemNexoniaId>\r
+                     <!--Optional:-->\r
+                     <hsp:LineItemValueList>\r
+                        <!--Zero or more repetitions:-->\r
+                        <hsp:LineItemValue ser:Id="?" ser:Ref="?">\r
+                           <!--Optional:-->\r
+                           <hsp:Id>?</hsp:Id>\r
+                           <!--Optional:-->\r
+                           <hsp:Name>?</hsp:Name>\r
+                           <!--Optional:-->\r
+                           <hsp:Value>?</hsp:Value>\r
+                        </hsp:LineItemValue>\r
+                     </hsp:LineItemValueList>\r
+                  </hsp:LineItem>\r
+               </hsp:LineItemList>\r
+               <!--Optional:-->\r
+               <hsp:ReferenceId>?</hsp:ReferenceId>\r
+            </hsp:ExpenseReportHeader>\r
+         </tem:request>\r
+      </tem:PersistExpenseReportDetails>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://tempuri.org/IExpenseReportManager/PersistExpenseReportDetails"/></con:request></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="11a1df03-d213-4047-9d2a-acf0b8266c70" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PersistLineItemAttachment TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="7386f274-c9d5-44cd-8e0f-41f91f7706d7" name="PersistLineItemAttachment"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CpiBasicHttpBinding_IExpenseReportManager</con:interface><con:operation>PersistLineItemAttachment</con:operation><con:request name="PersistLineItemAttachment" id="9d8b1225-689a-4936-8a00-16f00280976c" defaultOutgoingWss="" defaultIncomingWss=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:hsp="http://schemas.datacontract.org/2004/07/Hsp.Nexonia.ExpenseReportManager.Contracts.Dc">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:PersistLineItemAttachment>\r
+         <!--Optional:-->\r
+         <tem:persistLineItemAttachmentRequest>\r
+            <!--Optional:-->\r
+            <hsp:Content>VGhpcyBpcyBhbiBlbmNvZGVkIHN0cmluZw==</hsp:Content>\r
+            <!--Optional:-->\r
+            <hsp:ExpenseReportHeaderId>1231</hsp:ExpenseReportHeaderId>\r
+            <!--Optional:-->\r
+            <hsp:FileName>ABC.PDF</hsp:FileName>\r
+            <!--Optional:-->\r
+            <hsp:LineItemNexoniaId>12</hsp:LineItemNexoniaId>\r
+            <!--Optional:-->\r
+            <hsp:MimeType>PDF</hsp:MimeType>\r
+         </tem:persistLineItemAttachmentRequest>\r
+      </tem:PersistLineItemAttachment>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="http://tempuri.org/IExpenseReportManager/PersistLineItemAttachment" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="1400c4ea-cc55-4f4b-ac20-0a4238cfcdcd" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PersistLineItems TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="783a5b1f-b251-487e-9198-2e28af694f57" name="PersistLineItems"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CpiBasicHttpBinding_IExpenseReportManager</con:interface><con:operation>PersistLineItems</con:operation><con:request name="PersistLineItems" id="62a88b80-4198-41f1-80ae-36cca760ce53" defaultOutgoingWss="" defaultIncomingWss=""><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ws-qa3.hsp.com/Hsp.Nexonia.Test.Host/ExpenseReportManager.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:hsp="http://schemas.datacontract.org/2004/07/Hsp.Nexonia.ExpenseReportAccess.Contracts.Dc">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:PersistLineItems>\r
+         <!--Optional:-->\r
+         <tem:request ser:Id="?" ser:Ref="?">\r
+            <!--Optional:-->\r
+            <hsp:ExpenseReportHeaderId>?</hsp:ExpenseReportHeaderId>\r
+            <!--Optional:-->\r
+            <hsp:ExpenseReportLineItemList>\r
+               <!--Zero or more repetitions:-->\r
+               <hsp:LineItem ser:Id="?" ser:Ref="?">\r
+                  <!--Optional:-->\r
+                  <hsp:DocumentId>?</hsp:DocumentId>\r
+                  <!--Optional:-->\r
+                  <hsp:ExpenseReportHeaderId>?</hsp:ExpenseReportHeaderId>\r
+                  <!--Optional:-->\r
+                  <hsp:FileName>?</hsp:FileName>\r
+                  <!--Optional:-->\r
+                  <hsp:HasAttachment>?</hsp:HasAttachment>\r
+                  <!--Optional:-->\r
+                  <hsp:Id>?</hsp:Id>\r
+                  <!--Optional:-->\r
+                  <hsp:LineItemNexoniaId>?</hsp:LineItemNexoniaId>\r
+                  <!--Optional:-->\r
+                  <hsp:LineItemValueList>\r
+                     <!--Zero or more repetitions:-->\r
+                     <hsp:LineItemValue ser:Id="?" ser:Ref="?">\r
+                        <!--Optional:-->\r
+                        <hsp:Id>?</hsp:Id>\r
+                        <!--Optional:-->\r
+                        <hsp:Name>?</hsp:Name>\r
+                        <!--Optional:-->\r
+                        <hsp:Value>?</hsp:Value>\r
+                     </hsp:LineItemValue>\r
+                  </hsp:LineItemValueList>\r
+               </hsp:LineItem>\r
+            </hsp:ExpenseReportLineItemList>\r
+         </tem:request>\r
+      </tem:PersistLineItems>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://tempuri.org/IExpenseReportManager/PersistLineItems"/></con:request></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:requirements/><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:oAuth2ProfileContainer/><con:reporting><con:xmlTemplates/><con:parameters/></con:reporting><con:authRepository/></con:soapui-project>
